@@ -1,4 +1,6 @@
+const container = document.querySelector('.container');
 const button = document.querySelector('button');
+button.onclick = () => {clearBlock()};
 button.addEventListener('click',()=>{generateGrid();});
 
 function generateGrid() {
@@ -19,4 +21,9 @@ function generateGrid() {
         parent.setAttribute('style','display: flex;');
         container.appendChild(parent);
     }
+}
+
+function clearBlock() {
+    let container = document.querySelector('.container');
+    container.replaceChildren();
 }
